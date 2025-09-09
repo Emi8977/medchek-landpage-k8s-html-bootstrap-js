@@ -1,6 +1,11 @@
 replicaCount: 1
+
 image:
   tag: "dev-3c339a5"
+  # opcional, si quieres sobrescribir repository o pullPolicy:
+  # repository: emi8977/medchek-app-code
+  # pullPolicy: IfNotPresent
+
 ingress:
   enabled: true
   hosts:
@@ -8,3 +13,4 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
+
