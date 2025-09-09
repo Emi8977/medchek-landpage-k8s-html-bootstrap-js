@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "medchek-app.fullname" . }}-svc
+  labels:
+    {{- include "medchek-app.labels" . | nindent 4 }}
 spec:
   selector:
     app: {{ include "medchek-app.name" . }}
@@ -10,3 +12,4 @@ spec:
       port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}
   type: {{ .Values.service.type }}
+
