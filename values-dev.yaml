@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  tag: "dev"
+  tag: "dev-3c339a5"
 ingress:
   enabled: true
   hosts:
