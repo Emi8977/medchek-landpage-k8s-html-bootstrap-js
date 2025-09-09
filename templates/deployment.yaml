@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "medchek-app.fullname" . }}
   labels:
-    app: {{ include "medchek-app.name" . }}
+    {{- include "medchek-app.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
