@@ -1,0 +1,10 @@
+replicaCount: 1
+image:
+  tag: "dev"
+ingress:
+  enabled: true
+  hosts:
+    - host: dev.medchek.local
+      paths:
+        - path: /
+          pathType: Prefix

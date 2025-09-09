@@ -1,0 +1,14 @@
+replicaCount: 3
+image:
+  tag: "prod"
+ingress:
+  enabled: true
+  hosts:
+    - host: medchek.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - medchek.example.com
+      secretName: medchek-tls

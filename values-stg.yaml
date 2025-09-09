@@ -1,0 +1,14 @@
+replicaCount: 2
+image:
+  tag: "stg"
+ingress:
+  enabled: true
+  hosts:
+    - host: medchek.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - medchek.example.com
+      secretName: medchek-tls
