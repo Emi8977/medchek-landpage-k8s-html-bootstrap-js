@@ -1,0 +1,1 @@
+# medchek-landpage-k8s-html-bootstrap-js
